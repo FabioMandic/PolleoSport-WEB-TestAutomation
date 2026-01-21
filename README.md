@@ -85,8 +85,8 @@ Implementirano je više od 5 testnih scenarija koji pokrivaju ključne funkciona
 
 ## 🔗 Kako pokrenuti projekt
 
-Preduvjet: Instalirani Java JDK i Apache Maven. Nije potrebno ručno skidati drivere (Maven upravlja ovisnostima).
-
-### 1. Kloniranje repozitorija
-```bash
-git clone [https://github.com/FabioMandic/PolleoSport-WEB-TestAutomation.git](https://github.com/FabioMandic/PolleoSport-WEB-TestAutomation.git)
+1. Kloniraj repozitorij
+2. Otvori projekt: Pokreni IntelliJ IDEA, odaberi File > Open i označi mapu projekta.
+3. Učitaj ovisnosti: Desni klik na pom.xml → Maven > Reload Project (kako bi se preuzele sve biblioteke i driveri).
+4. Pokreni testove:
+Preko Terminala: Upiši naredbu mvn test
