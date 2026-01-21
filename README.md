@@ -1,109 +1,69 @@
-# PolleoSport-WEB-TestAutomation
-Ovaj repozitorij sadrži okvir (framework) za automatsko testiranje web trgovine Polleo Sport. Projekt je izrađen kao završni zadatak temeljen na tehnikama i alatima obrađenim kroz laboratorijske vježbe.
+# Polleo Sport - Web Test Automation Framework
 
-Cilj projekta je demonstrirati primjenu Selenium WebDrivera i TestNG-a unutar Page Object Model (POM) arhitekture za robusno i održivo testiranje web aplikacija.
+Dobrodošli u repozitorij projekta za automatsko testiranje web trgovine [Polleo Sport](https://polleosport.hr/). 
+Ovaj projekt je izrađen kao završni rad u sklopu kolegija, temeljen na znanjima i tehnikama stečenim kroz laboratorijske vježbe (LV1 - LV6).
 
-🛠 Korišteni alati i tehnologije
-Projekt je izgrađen koristeći standardni stack za automatizaciju web testiranja:
+Cilj projekta je demonstrirati robustan okvir (framework) za automatizaciju testiranja koristeći **Selenium WebDriver**, **Java** programski jezik i **TestNG** okvir, organiziran prema **Page Object Model (POM)** arhitekturi.
 
-Jezik: Java (JDK 1.8+)
+---
 
-Build alat: Apache Maven
+## 🛠 Korištene tehnologije i alati
 
-Testni okvir: TestNG
+Projekt koristi standardni industrijski stack alata koji su obrađeni u vježbama:
 
-Web Automatizacija: Selenium WebDriver
+* **Programski jezik:** Java JDK 1.8+
+* **Web Automatizacija:** Selenium WebDriver
+* **Testni Framework:** TestNG
+* **Build & Dependency Management:** Apache Maven
+* **IDE:** IntelliJ IDEA
+* **Version Control:** Git & GitHub
 
-IDE: IntelliJ IDEA
+---
 
-Implementirane tehnike
-Kako bi se osigurala kvaliteta, stabilnost i skalabilnost koda, implementirane su sljedeće napredne tehnike:
+## 🚀 Implementirane napredne tehnike (Extra Features)
 
-Page Object Model (POM):
+Kako bi se osigurala maksimalna kvaliteta koda i skalabilnost, u projekt su ugrađene sljedeće napredne tehnike:
 
-Logika interakcije sa stranicom odvojena je od samih testova.
+### 1. Page Object Model (POM)
+Odvajanje logike testova od logike stranice.
+* **`pages` paket:** Sadrži klase (`HomePage`, `ProductPage`, `CartPage`) koje reprezentiraju web stranice i njihove elemente.
+* **`tests` paket:** Sadrži samo testne metode i asercije, čineći testove čitljivima i lakima za održavanje.
 
-Svaka stranica (npr. HomePage, ProductPage, CartPage) ima svoju klasu u paketu pages.
+### 2. Napredna sinkronizacija (Waits)
+Umjesto nestabilnih `Thread.sleep` metoda, implementirana su **Eksplicitna čekanja (Explicit Waits)**.
+* Korištenje `WebDriverWait` i `ExpectedConditions` klasa osigurava da test čeka točno onoliko koliko je potrebno da element postane klikabilan ili vidljiv.
 
-Smanjena dupliciranost koda i olakšano održavanje.
+### 3. Cross-Browser Testing
+Implementiran je **`DriverFactory`** uzorak koji omogućuje pokretanje testova na različitim preglednicima promjenom samo jednog parametra:
+* Google Chrome
+* Mozilla Firefox
 
-Explicit Waits (Pametna čekanja):
+### 4. Objektno Orijentirano Programiranje (OOP)
+* **Nasljeđivanje (Inheritance):** Sve Page klase nasljeđuju `BasePage` (zajedničke metode), a testne klase nasljeđuju `BaseTest` (setup/teardown logika).
+* **Enkapsulacija:** Web elementi su privatni (`private By locator`) i dostupni samo putem javnih metoda.
 
-Umjesto nestabilnih Thread.sleep, korištene su WebDriverWait i ExpectedConditions naredbe.
+### 5. Reporting (Izvještavanje)
+Integracija s **Maven Surefire Pluginom** omogućuje automatsko generiranje HTML izvještaja o rezultatima testiranja nakon svakog pokretanja.
 
-Sustav pametno čeka da elementi postanu klikabilni ili vidljivi prije akcije.
+### 6. Optimizacija performansi
+Korištenje `@BeforeClass` i `@AfterClass` anotacija iz TestNG-a osigurava da se preglednik podiže samo jednom po testnoj klasi, umjesto za svaki test zasebno, čime je vrijeme izvođenja drastično smanjeno.
 
-Cross-Browser Testing:
+---
 
-Implementiran DriverFactory koji omogućuje pokretanje testova na Google Chrome i Mozilla Firefox preglednicima putem parametara.
+## 📂 Struktura projekta
 
-Objektno Orijentirano Programiranje (OOP):
-
-Nasljeđivanje (Inheritance): Sve Page klase nasljeđuju BasePage, a testne klase BaseTest.
-
-Enkapsulacija: Web elementi su privatni i dostupni samo kroz javne metode.
-
-Optimizacija brzine izvođenja:
-
-Korištenje @BeforeClass i @AfterClass anotacija kako bi se preglednik otvorio samo jednom za cijeli set testova, čime je vrijeme izvršavanja smanjeno za 75%.
-
-Headless Mode:
-
-Podrška za pokretanje testova bez grafičkog sučelja (korisno za CI/CD integraciju).
-
-📂 Struktura projekta
-Plaintext
+```text
 src/test/java
 ├── base
-│   └── BaseTest.java       # Postavke drivera (Setup/Teardown)
+│   └── BaseTest.java       # Inicijalizacija Drivera, Setup i Teardown metode
 ├── pages
-│   ├── BasePage.java       # Zajedničke metode za sve stranice
-│   ├── HomePage.java       # Lokatori i metode za naslovnicu
-│   ├── CartPage.java       # Logika košarice
-│   ├── ProductPage.java    # Logika stranice proizvoda
-│   └── ...
+│   ├── BasePage.java       # Wrapper metode i zajednička logika
+│   ├── HomePage.java       # Lokatori i akcije za naslovnicu
+│   ├── SearchPage.java     # Logika pretraživanja
+│   ├── ProductPage.java    # Interakcija s proizvodom
+│   └── CartPage.java       # Upravljanje košaricom
 ├── tests
-│   └── PolleoTests.java    # Izvršni testni slučajevi
+│   └── PolleoTests.java    # Izvršni testni scenariji
 └── utils
-    ├── DriverFactory.java  # Tvornica za Chrome/Firefox drivere
-    └── Waits.java          # Wrapper klasa za eksplicitna čekanja
-    
-✅ Izvršeni testni slučajevi
-Projekt sadrži ukupno 8 automatiziranih testova koji pokrivaju ključne funkcionalnosti:
-
-Validacija naslova: Provjera da se Home Page ispravno učitao.
-
-Pretraživanje (Search): Testiranje tražilice s pojmom "protein".
-
-URL Validacija: Provjera rutiranja nakon pretrage pojma "kreatin".
-
-Navigacija (Proteini): Otvaranje kategorije "Proteini" iz glavnog izbornika.
-
-Navigacija (Vitamini): Otvaranje kategorije "Vitamini i zdravlje".
-
-Linkovi u zaglavlju: Provjera funkcionalnosti linka "Poslovnice".
-
-Linkovi u zaglavlju: Provjera funkcionalnosti linka "Povrati".
-
-Dodavanje u košaricu (E2E): Kompletan tok: Pretraga -> Odabir proizvoda -> Dodavanje u košaricu -> Provjera stanja košarice.
-
-💻 Kako pokrenuti testove
-Projekt koristi Maven za upravljanje ovisnostima i pokretanje testova. Nije potrebno ručno skidati .jar datoteke.
-
-1. Standardno pokretanje (Chrome)
-Otvorite terminal u korijenskom direktoriju projekta i upišite:
-
-Bash
-mvn clean test
-2. Pokretanje na Firefox pregledniku
-Bash
-mvn clean test -Dbrowser=firefox
-3. Pokretanje u "Headless" modu (Brže, bez GUI-a)
-Bash
-mvn clean test -Dheadless=true
-📊 Izvještaji (Reporting)
-Nakon izvršavanja testova, Maven i TestNG automatski generiraju izvještaje o rezultatima.
-
-Izvještaj možete pronaći na putanji: target/surefire-reports/emailable-report.html
-
-Otvorite tu datoteku u web pregledniku za detaljan pregled prolaznosti testova (Passed/Failed/Skipped).
+    ├── DriverFactory.java  # Upravljanje instancama preglednika (Chrome/Firefox)
+    └── Waits.java          # Pomoćna klasa za pametna čekanja
