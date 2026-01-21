@@ -1,7 +1,6 @@
 # Polleo Sport - Web Test Automation Framework
 
-Dobrodošli u repozitorij projekta za automatsko testiranje web trgovine [Polleo Sport](https://polleosport.hr/). 
-Ovaj projekt je izrađen kao završni rad u sklopu kolegija, temeljen na znanjima i tehnikama stečenim kroz laboratorijske vježbe.
+DDobrodošli u repozitorij projekta za automatsko testiranje web trgovine Polleo Sport. Ovaj projekt predstavlja robustan okvir (framework) za automatizaciju web testiranja, razvijen s ciljem demonstracije modernih praksi i obrazaca u osiguravanju kvalitete softvera.
 
 Cilj projekta je demonstrirati robustan okvir (framework) za automatizaciju testiranja koristeći **Selenium WebDriver**, **Java** programski jezik i **TestNG** okvir, organiziran prema **Page Object Model (POM)** arhitekturi.
 
@@ -88,5 +87,4 @@ Implementirano je više od 5 testnih scenarija koji pokrivaju ključne funkciona
 1. Kloniraj repozitorij
 2. Otvori projekt: Pokreni IntelliJ IDEA, odaberi File > Open i označi mapu projekta.
 3. Učitaj ovisnosti: Desni klik na pom.xml → Maven > Reload Project (kako bi se preuzele sve biblioteke i driveri).
-4. Pokreni testove:
-Preko Terminala: Upiši naredbu mvn test
+4. Pokretanje preko terminala: naredba mvn test
