@@ -67,3 +67,25 @@ src/test/java
 └── utils
     ├── DriverFactory.java  # Upravljanje instancama preglednika (Chrome/Firefox)
     └── Waits.java          # Pomoćna klasa za pametna čekanja
+
+## ✅ Popis Testnih Slučajeva (Test Cases)
+
+Implementirano je više od 5 testnih scenarija koji pokrivaju ključne funkcionalnosti web shopa temeljenih na principima testiranja crne kutije:
+
+* **Homepage Title Validation:** Provjera ispravnosti naslova stranice.
+* **Search Functionality:** Provjera vraća li tražilica rezultate za pojam "protein".
+* **Routing Validation:** Provjera mijenja li se URL ispravno nakon pretrage.
+* **Category Navigation (Proteini):** Navigacija kroz glavni izbornik do kategorije Proteini.
+* **Category Navigation (Vitamini):** Navigacija do kategorije Vitamini.
+* **Header Links:** Provjera funkcionalnosti linkova "Poslovnice" i "Povrati".
+* **Add to Cart (E2E):** Kompletan proces dodavanja proizvoda u košaricu iz rezultata pretrage.
+
+---
+
+## 💻 Kako pokrenuti projekt
+
+Preduvjet: Instalirani Java JDK i Apache Maven. Nije potrebno ručno skidati drivere (Maven upravlja ovisnostima).
+
+### 1. Kloniranje repozitorija
+```bash
+git clone [https://github.com/FabioMandic/PolleoSport-WEB-TestAutomation.git](https://github.com/FabioMandic/PolleoSport-WEB-TestAutomation.git)
