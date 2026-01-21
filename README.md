@@ -1,6 +1,6 @@
 # Polleo Sport - Web Test Automation Framework
 
-DDobrodošli u repozitorij projekta za automatsko testiranje web trgovine Polleo Sport. Ovaj projekt predstavlja robustan okvir (framework) za automatizaciju web testiranja, razvijen s ciljem demonstracije modernih praksi i obrazaca u osiguravanju kvalitete softvera.
+Dobrodošli u repozitorij projekta za automatsko testiranje web trgovine Polleo Sport. Ovaj projekt je izrađen kao završni rad u sklopu kolegija, temeljen na znanjima i tehnikama stečenim kroz laboratorijske vježbe.
 
 Cilj projekta je demonstrirati robustan okvir (framework) za automatizaciju testiranja koristeći **Selenium WebDriver**, **Java** programski jezik i **TestNG** okvir, organiziran prema **Page Object Model (POM)** arhitekturi.
 
