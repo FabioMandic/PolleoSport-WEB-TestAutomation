@@ -78,7 +78,7 @@ Implementirano je više od 5 testnih scenarija koji pokrivaju ključne funkciona
 * **Category Navigation (Proteini):** Navigacija kroz glavni izbornik do kategorije Proteini.
 * **Category Navigation (Vitamini):** Navigacija do kategorije Vitamini.
 * **Header Links:** Provjera funkcionalnosti linkova "Poslovnice" i "Povrati".
-* **Add to Cart (E2E):** Kompletan proces dodavanja proizvoda u košaricu iz rezultata pretrage.
+* **Add to Cart:** Kompletan proces dodavanja proizvoda u košaricu iz rezultata pretrage.
 
 ---
 
