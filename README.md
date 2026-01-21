@@ -7,7 +7,7 @@ Cilj projekta je demonstrirati robustan okvir (framework) za automatizaciju test
 
 ---
 
-## 🛠 Korištene tehnologije i alati
+## 🔗 Korištene tehnologije i alati
 
 Projekt koristi standardni industrijski stack alata koji su obrađeni u vježbama:
 
@@ -20,7 +20,7 @@ Projekt koristi standardni industrijski stack alata koji su obrađeni u vježbam
 
 ---
 
-## 🚀 Implementirane napredne tehnike (Extra Features)
+## 🔗 Implementirane napredne tehnike (Extra Features)
 
 Kako bi se osigurala maksimalna kvaliteta koda i skalabilnost, u projekt su ugrađene sljedeće napredne tehnike:
 
@@ -83,7 +83,7 @@ Implementirano je više od 5 testnih scenarija koji pokrivaju ključne funkciona
 
 ---
 
-## 💻 Kako pokrenuti projekt
+## 🔗 Kako pokrenuti projekt
 
 Preduvjet: Instalirani Java JDK i Apache Maven. Nije potrebno ručno skidati drivere (Maven upravlja ovisnostima).
 
