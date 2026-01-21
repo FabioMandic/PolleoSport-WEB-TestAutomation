@@ -68,6 +68,7 @@ src/test/java
     ├── DriverFactory.java  # Upravljanje instancama preglednika (Chrome/Firefox)
     └── Waits.java          # Pomoćna klasa za pametna čekanja
 
+```
 ## ✅ Popis Testnih Slučajeva (Test Cases)
 
 Implementirano je više od 5 testnih scenarija koji pokrivaju ključne funkcionalnosti web shopa temeljenih na principima testiranja crne kutije:
