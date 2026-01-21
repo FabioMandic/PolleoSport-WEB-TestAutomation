@@ -1,0 +1,11 @@
+base\BaseTest.class
+pages\BasePage.class
+pages\ProductPage.class
+utils\DriverFactory.class
+pages\CartPage.class
+pages\CategoryPage.class
+pages\HomePage.class
+pages\SearchPage.class
+utils\Waits.class
+pages\SearchResultsPage.class
+tests\PolleoTests.class
